@@ -1,0 +1,3 @@
+-- Problem 3: Optimized logical plan in relational algebra goes here.
+
+

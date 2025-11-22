@@ -1,0 +1,3 @@
+-- Problem 1: Initial (naïve) logical plan in relational algebra goes here.
+
+
