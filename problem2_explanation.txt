@@ -1,3 +1,5 @@
 -- Problem 2: Explanation (2-5 sentences) of your optimizations goes here.
 
-
+By first performing the filtering on s to check only when the student is a CS major. Then, filtering on c and projecting c and e only to get the columns that we need to operate
+on, we can filter the tables down to only sid and sname so that when we perform a semi join (for the EXISTS portion of the query) we will operate on as few rows as possible.
+By the end we can project on sname.

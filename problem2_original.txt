@@ -1,3 +1,13 @@
 -- Problem 2: Initial (naïve) logical plan in relational algebra goes here.
 
+π sname
+(
+    σ major = 'CS' AND EXISTS(subquery) (Student s)
+)
 
+subquery = 
+EXISTS
+(
+    σ (e.sid = s.sid AND c.dept = 'CS')
+    ( Enrollment e ⋈ (e.cid = c.cid) Course c )
+)

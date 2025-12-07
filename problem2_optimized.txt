@@ -1,3 +1,18 @@
 -- Problem 2: Optimized logical plan in relational algebra goes here.
 
+π sname
+(
+    Student_CS s ⋉ (s.sid = e.sid) Enrollment_CS e
+)
 
+Student_CS =
+π sid, sname
+(
+	σ (major = 'CS') Student s
+)
+
+Enrollment_CS =
+π sid
+(
+    (π sid, cid (Enrollment e) ⋈ (e.cid = c.cid) π cid(σ (c.dept = 'CS') Course c))
+)
