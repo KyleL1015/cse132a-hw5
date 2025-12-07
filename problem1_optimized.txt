@@ -1,3 +1,8 @@
 -- Problem 1: Optimized logical plan in relational algebra goes here.
 
-
+π d.dname, e.name, p.pid
+(	π dname, deptid (σ Department d (location = 'LA')) ⋈ (d.deptid = p.deptid)
+	π pid, deptid (σ Project p (10,000 <= budget and budget <= 30,000)) ⋈ (p.pid = a.pid)
+	π pid, empid (Assignment a) ⋈ (a.empid = e.empid)
+	π empid (σ Employee e (salary > 80,000))
+)

@@ -1,3 +1,5 @@
 -- Problem 1: Explanation (2-5 sentences) of your optimizations goes here.
-
+By doing this same query by first filtering each of the tables to the specified conditions such as e.salary > 80,000 and then projecting only the columns that we need for 
+output and joins. That way when we perform the joins for each table we can guarantee operation son the minimal number of tuples. Then at the end we perform projection again
+to get only the specified columns.
 

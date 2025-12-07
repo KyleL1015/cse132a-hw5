@@ -1,3 +1,8 @@
 -- Problem 1: Initial (naïve) logical plan in relational algebra goes here.
 
+π d.dname, e.name, p.pid
+( σ d.location = 'LA' and e.salary > 80,000 and 10,000 <= p.budget and p.budget <= 30,000
+	(Department d ⋈ (d.deptid = p.deptid) Project p ⋈ (p.pid = a.pid) Assignment a ⋈ (a.empid = e.empid) Employee e)
+)
+
 
