@@ -1,3 +1,6 @@
 -- Problem 3: Explanation (2-5 sentences) of your optimizations goes here.
 
-
+This question is pretty similar to the actions in question 1 where we need to first filter each of the tables by their respective conditions like c.region = 'West' for example
+to minimize the amount of rows we need to join on. Then we project only the necessary columns out of those and join them. We need to perform joins on the tables that have
+already had filters put on them first because (most likely) those tables are smaller than any table that hasn't had a filter applied (only oi). Then by the end we can just grab
+the projected rows necessary.
